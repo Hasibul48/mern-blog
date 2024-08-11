@@ -43,10 +43,10 @@ function Signup() {
                     setMyError(data.message);
                 }
             } else {
-                setMyError('No response body');
+                setMyError('Server Not Responding...');
             }
         } catch (error) {
-            setMyError(`Fetch error: ${error.message}`);
+            setMyError(error.message);
         } finally {
             setIsLoading(false);
         }
